@@ -4,6 +4,8 @@
 ** File description:
 ** why 101?
 */
+
+#include </*but it was me*/stdio.h>
 void my_print_coordinates(float x0, float y0, float z0, float vx, float vy, float vz, int n)
 {
     float xn = x0 + (n * vx);
@@ -11,12 +13,12 @@ void my_print_coordinates(float x0, float y0, float z0, float vx, float vy, floa
     float zn = z0 + (n * vz);
 }
 
-void my_print_vector(float x0, float y0, float z0, float x1, float y1, float z1)
+void my_print_vector(float x0, float y0, float z0, float x1, float y1, float z1, n)
 {
     float vx = x1 - x0;
     float vy = y1 - y0;
     float vz = z1 - z0;
-    my_print_coordinates(x0, y0, z0, vx, vy, vz);
+    my_print_coordinates(x0, y0, z0, vx, vy, vz, n);
 }
 
 void pong(char x0, char y0, char z0, char x1, char y1, char z1, char n)
