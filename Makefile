@@ -12,7 +12,7 @@ SRC	=	src/101pong.c \
 
 CC	=	gcc
 
-DEFLAGS	=	-W -Wextra -Wall -g3
+DEFLAGS	=	-W -Wextra -Wall -g3 -lm
 
 CPPFLAGS	=	-I./include/
 

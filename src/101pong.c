@@ -7,16 +7,36 @@
 
 #include "my.h"
 
-void will_reach_paddle(float z0, float z1)
+int will_reach_paddle(float z0, float z1)
 {
-    if (z1 < 0 && z0 > 0 || z1 > 0 && z0 < 0)
+    int i = 0;
+
+    if (z1 < 0 && z0 > 0 || z1 > 0 && z0 < 0) {
         printf("The ball won’t reach the paddle.");
-    if (z1 > z0 && z1 > 0 && z0 > 0)
+        i++;
+    }
+    if (z1 > z0 && z1 > 0 && z0 > 0) {
         printf("The ball won’t reach the paddle.");
-    if (z1 < z0 && z1 < 0 && z0 < 0)
+        i++;
+    }
+    if (z1 < z0 && z1 < 0 && z0 < 0) {
         printf("The ball won’t reach the paddle.");
-    if (z1 == z0)
+        i++;
+    }
+    if (z1 == z0) {
         printf("The ball won’t reach the paddle.");
+        i++;
+    }
+    return (i);   
+}
+
+void cal_angle(float vx, float vy, float vz, float z0)
+{
+    float norme = sqrt(powf(vx, 2) + powf(vy, 2) + powf(vz, 2));
+    float angle = fabs(asin(z0 / norme) * (180 / PI));
+
+    printf("The incidence angle is:\n");
+    printf("%.2f degrees", angle);
 }
 
 void my_print_coordinates(float x1, float y1, float z1,
@@ -40,7 +60,8 @@ void my_print_vector(float x0, float y0, float z0,
     printf("The velocity vector of the ball is:\n");
     printf("(%.2f, %.2f, %.2f)\n", vx, vy, vz);
     my_print_coordinates(x1, y1, z1, vx, vy, vz, n);
-    will_reach_paddle(z0, z1);
+    if (will_reach_paddle(z0, z1) == 0)
+        cal_angle(vx, vy, vz, z0);
 }
 
 void pong(char *x0, char *y0, char *z0,
