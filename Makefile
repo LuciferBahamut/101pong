@@ -7,16 +7,19 @@
 
 NAME	=	101pong
 
-SRC	=	src/101pong.c
+SRC	=	src/101pong.c \
+		src/main.c
 
 CC	=	gcc
 
 DEFLAGS	=	-W -Wextra -Wall -g3
 
+CPPFLAGS	=	-I./include/
+
 OBJ	=	$(SRC:.c=.o)
 
 all:	$(OBJ)
-	$(CC) $(DEFLAGS) -o $(NAME) $(OBJ)
+	$(CC) $(DEFLAGS) -o $(NAME) $(OBJ) $(CPPFLAGS)
 
 clean:
 	rm -f $(OBJ)

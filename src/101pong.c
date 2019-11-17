@@ -5,8 +5,7 @@
 ** i hope i'll be usefull this time
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "my.h"
 
 void will_reach_paddle(float z0, float z1)
 {
@@ -52,13 +51,4 @@ void pong(char *x0, char *y0, char *z0, char *x1, char *y1, char *z1, char *n)
     float fy1 = atof(y1);
     float fz1 = atof(z1);
     my_print_vector(fx0, fy0, fz0, fx1, fy1, fz1, fn);
-}
-
-int main (int ac, char **av)
-{
-    if (ac == 8) {
-        pong (av[1], av[2], av[3], av[4], av[5], av[6], av[7]);
-            return (0);
-    }
-    return (84);
 }
