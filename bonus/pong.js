@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var xBall = Math.floor(Math.random() * 300) + 50;
 var yBall = 50;
 var x_speed = (2, 7);
