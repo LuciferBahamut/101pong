@@ -13,7 +13,8 @@ void my_print_coordinates(float x0, float y0, float z0, float vx, float vy, floa
     float yn = y0 + (n * vy);
     float zn = z0 + (n * vz);
 
-    printf("At time t + %i, ball coordinates will be:\n(%.2f, %.2f, %.2f)\n", xn, yn, zn);
+    printf("At time t + %i, ball coordinates will be:\n(%.2f, %.2f, %.2f)\n", n, xn, yn, zn);
+
 }
 
 void my_print_vector(float x0, float y0, float z0, float x1, float y1, float z1, int n)

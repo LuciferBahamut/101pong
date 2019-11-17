@@ -40,7 +40,7 @@ int my_floatoi1(char *str)
             nb *= 10;
             nb += str[n] - '0';
         } else {
-            return(nb)
+            return(nb);
         }
         n++;
     }
@@ -64,8 +64,10 @@ float my_floatoi2(char *str)
 }
 float my_floatoi(char *str)
 {
-    float a = my_floatoi1(*str);
-    float b = my_floatoi2(*str);
-    a += b;
-    return (a);
+    float n = my_floatoi1(str);
+    float b = my_floatoi2(str);
+    float nb = n + b;
+    if (str[1] == '-')
+        nb *= -1;
+    return (nb);
 }
