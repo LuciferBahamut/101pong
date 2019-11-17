@@ -27,7 +27,7 @@ int will_reach_paddle(float z0, float z1)
         printf("The ball won’t reach the paddle.");
         i++;
     }
-    return (i);   
+    return (i);
 }
 
 void cal_angle(float vx, float vy, float vz, float z0)
