@@ -5,6 +5,8 @@
 ** 101pong
 */
 
+#include "my.h"
+
 int main (int ac, char **av)
 {
     if (ac == 8) {

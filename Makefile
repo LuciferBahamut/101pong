@@ -7,7 +7,8 @@
 
 NAME	=	101pong
 
-SRC	=	src/101pong.c
+SRC	=	src/101pong.c \
+		src/main.c
 
 CC	=	gcc
 
