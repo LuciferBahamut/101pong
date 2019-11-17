@@ -18,11 +18,12 @@ OBJ	=	$(SRC:.c=.o)
 all:	$(OBJ)
 	$(CC) $(DEFLAGS) -o $(NAME) $(OBJ)
 
-clean:	rm -f $(OBJ)
+clean:
+	rm -f $(OBJ)
 
 fclean:	clean
 	rm -f $(NAME)
 
-re:	clean all
+re:	fclean all
 
 .PHONY:	all clean fclean re

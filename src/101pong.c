@@ -8,13 +8,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void my_print_coordinates(float x0, float y0, float z0, float vx, float vy, float vz, int n)
+void my_print_coordinates(float x1, float y1, float z1, float vx, float vy, float vz, int n)
 {
-    float xn = x0 + (n * vx);
-    float yn = y0 + (n * vy);
-    float zn = z0 + (n * vz);
+    float xn = x1 + (n * vx);
+    float yn = y1 + (n * vy);
+    float zn = z1 + (n * vz);
 
-    printf("At time t + %i, ball coordinates will be:\n(%.2f, %.2f, %.2f)\n", xn, yn, zn);
+    printf("At time t + %d, ball coordinates will be:\n(%.2f, %.2f, %.2f)\n", n, xn, yn, zn);
 }
 
 void my_print_vector(float x0, float y0, float z0, float x1, float y1, float z1, int n)
@@ -24,7 +24,7 @@ void my_print_vector(float x0, float y0, float z0, float x1, float y1, float z1,
     float vz = z1 - z0;
 
     printf("The velocity vector of the ball is :\n(%.2f, %.2f, %.2f)\n", vx, vy, vz);
-    my_print_coordinates(x0, y0, z0, vx, vy, vz, n);
+    my_print_coordinates(x1, y1, z1, vx, vy, vz, n);
 }
 
 void pong(char *x0, char *y0, char *z0, char *x1, char *y1, char *z1, char *n)
