@@ -5,17 +5,24 @@
 ## MAKEFILE for fonction
 ##
 
-all: 	compile
+NAME	=	101pong
 
-compile: *.c
-	gcc *.c
+SRC	=	src/101pong.c
 
-execute:a.out
-	./a.out
+CC	=	gcc
 
-exe:	compile execute
+DEFLAGS	=	-W -Wextra -Wall -g3
 
-clean:	mr_clean
-	./mr_clean
+OBJ	=	$(SRC:.c=.o)
+
+all:	$(OBJ)
+	$(CC) $(DEFLAGS) -o $(NAME) $(OBJ)
+
+clean:	rm -f $(OBJ)
+
+fclean:	clean
+	rm -f $(NAME)
 
 re:	clean all
+
+.PHONY:	all clean fclean re
