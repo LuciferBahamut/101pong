@@ -8,6 +8,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void will_reach_paddle(float z0, float z1)
+{
+    if (z1 < 0 && z0 > 0 || z1 > 0 && z0 < 0)
+        printf("The ball won’t reach the paddle.");
+    if (z1 > z0 && z1 > 0 && z0 > 0)
+        printf("The ball won’t reach the paddle.");
+    if (z1 < z0 && z1 < 0 && z0 < 0)
+        printf("The ball won’t reach the paddle.");
+    if (z1 == z0)
+        printf("The ball won’t reach the paddle.");
+}
+
 void my_print_coordinates(float x1, float y1, float z1, float vx, float vy, float vz, int n)
 {
     float xn = x1 + (n * vx);
@@ -27,6 +39,7 @@ void my_print_vector(float x0, float y0, float z0, float x1, float y1, float z1,
     printf("The velocity vector of the ball is:\n");
     printf("(%.2f, %.2f, %.2f)\n", vx, vy, vz);
     my_print_coordinates(x1, y1, z1, vx, vy, vz, n);
+    will_reach_paddle(z0, z1);
 }
 
 void pong(char *x0, char *y0, char *z0, char *x1, char *y1, char *z1, char *n)
