@@ -7,16 +7,12 @@
 
 NAME	=	101pong
 
-SRC	=	101pong.c
+SRC	=	pong.js
 
-CC	=	gcc
+CC	=	node
 
-DEFLAGS	=	-W -Wextra -Wall -g3
-
-OBJ	=	$(SRC:.c=.o)
-
-all:	$(OBJ)
-	$(CC) $(DEFLAGS) -o $(NAME) $(OBJ)
+all:
+	$(CC) $(SRC)
 
 clean:
 	rm -f $(OBJ)

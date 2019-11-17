@@ -95,4 +95,3 @@ function paddle_movement() {
 
   }
 }
-}
