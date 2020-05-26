@@ -16,3 +16,5 @@ Result : 64,5 %
   - Mathematical rigor  : 66,7 %  -- 4 / 6
   
 Beware of -42 for Epitech students !
+
+[Group] Made with Archibald Roulet
