@@ -13,4 +13,4 @@
 <p></p>
 <p>Beware of -42 for Epitech students !</p>
 
-<p>[Group] Made with Archibald Roulet</p>
+<p>[Group] Made with Archibald Roulet <a href="https://github.com/Sh4llower">son GitHub</a></p>
