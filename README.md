@@ -3,7 +3,7 @@
 
 <p>1st semester Maths unit : Grade A</p>
 
-<p>101pong_2019 -- Without Crash</p>
+<p>101pong -- Without Crash</p>
 
 <p>Result : 64,5 %</p>
   <li>Rigo : 60 %    -- 6 / 10 </li>
